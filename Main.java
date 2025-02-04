@@ -52,5 +52,40 @@ public class Main {
       System.out.println(lastElement);
       System.out.println(toBuy.get(3));
 
+      // .set(int index, obj) REPLACES element at that index with the new obj
+      // returns the replaced element (same type as the list holds)
+      String replacedElement = toBuy.set(0, "Mango");
+      System.out.println(toBuy);
+      // Often, you won't need to store the return output
+      toBuy.set(2, "Rice");
+      System.out.println(toBuy);
+
+      // .remove(int index) DELETES element at that index
+      // returns the removed obj (string)
+      String removedElement = toBuy.remove(0);
+      System.out.println(toBuy);
+      System.out.println("Moved to shopping cart:" + removedElement);      
+      // ALSO shifts all remaining elements to the left (lower index)
+      // Often, you won't actaully need to store the removed item
+      toBuy.remove(1);
+      System.out.println(toBuy);
+
+      // THING WE HAVE TO DO
+      ArrayList<String> toDoList = new ArrayList<String>();
+      toDoList.add(0, "Do homework");
+      toDoList.add(1, "Help make dinner");
+      toDoList.add(2, "Call grandpa");
+      System.out.println("TO DO:" + toDoList);
+
+      toDoList.set(1, "Order pizza");
+      System.out.println(toDoList);
+
+      System.out.println(toDoList.size() + " things left to do!");
+
+      System.out.println(toDoList.get(0) + " is my biggest priority!");
+
+      System.out.println(toDoList.remove(0));
+      System.out.println(toDoList);
+
    }
 }
