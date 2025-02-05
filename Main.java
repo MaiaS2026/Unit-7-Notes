@@ -85,7 +85,24 @@ public class Main {
       System.out.println(toDoList.get(0) + " is my biggest priority!");
 
       System.out.println(toDoList.remove(0));
-      System.out.println(toDoList);
+      System.out.println(toDoList); 
+
+      // 7.3 Traversing with Loops
+      ArrayList<Integer> bingoNumbers = new ArrayList<Integer>();
+      bingoNumbers.add(26);
+      bingoNumbers.add(49);
+      bingoNumbers.add(62);
+      bingoNumbers.add(17);
+
+      // ENHANCED FOR-EACH LOOP
+      int total = 0;
+      int product = 1;
+      for (Integer num : bingoNumbers) {
+         total = total + num; // same as total += num
+         product *= num;
+      }
+      System.out.println("Sum of bingo numbers: " + total);
+      System.out.println("Product of bingo numbers: " + product);
 
    }
 }
