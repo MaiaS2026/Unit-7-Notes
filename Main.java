@@ -131,15 +131,11 @@ public class Main {
          if (watchedShow.equals(watchList.get(index))){
             watchList.remove(index);
             found = true;
-            index++;
          }
          else {
             index++;
          }
-         System.out.println(watchList);
       }
-
-
-
+      System.out.println(watchList);
    }
 }
